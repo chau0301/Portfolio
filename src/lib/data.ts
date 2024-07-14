@@ -1,61 +1,93 @@
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
+
 export const socials = [
   {
     name: "GitHub",
     title: "github",
     url: "https://github.com/chau0301",
-    image: "/socials/github.svg",
+    icon: FaGithub,
   },
   {
     name: "LinkedIn",
     title: "linkedin",
     url: "https://www.linkedin.com/in/chau0301/",
-    image: "/socials/linkedin.svg",
+    icon: FaLinkedin,
+  },
+  {
+    name: "Mail",
+    title: "mail",
+    url: "mailto:nongngocchau1@gmail.com",
+    icon: SiGmail,
   },
 ];
 
 export const experiences = [
   {
     time: {
-      from: "2022",
+      from: "2023",
       to: "Present",
     },
-    name: "Fullstack Web Developer",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-    stacks: ["NextJS", "TailwindCSS", "Prisma", "Docker", "Docker Compose"],
+    name: "Fullstack Developer at TEBGROUP",
+    description: [
+      "Developed a high-performance e-commerce platform for handmade products. Used Nest.js for backend, Cloudflare for optimization, and Astro/React for frontend.",
+      "Set up Elasticsearch and Kibana, visually integrated with Kibana, using Docker to manage user actions.",
+      "Implemented ElectronJs to interface with Python and NodeJS for working with PSD, SVG, and AI files.",
+    ],
+    stacks: [
+      "NestJS",
+      "PostgresSQL",
+      "Drizzle",
+      "kysely",
+      "Docker",
+      "Docker Compose",
+      "Elasticsearch",
+      "Kafka",
+      "Astro",
+      "ElectronJS",
+      "TailwindCSS",
+      "Python",
+    ],
   },
   {
     time: {
       from: "2022",
-      to: "Present",
+      to: "2023",
     },
-    name: "Fullstack Web Developer2",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-    stacks: ["NextJS", "TailwindCSS", "Prisma", "Docker", "Docker Compose"],
+    name: "Backend Developer at CYFEER JSC.",
+    description: [
+      "Developed a microservice-based application using Node.js Express as part of the development team",
+      "Successfully integrated the application with 4 third-party services using APIs and hooks, demonstrating strong API design and integration skills.",
+      "Created comprehensive and user-friendly RESTful API documentation using Swagger for the website, mobile, and services partners, ensuring clear communication and understanding among developers and stakeholders.",
+      "Working with Sumitomo, the Japan-based company",
+    ],
+    stacks: [
+      "NodeJS",
+      "NestJS",
+      "PostgreSQL",
+      "Microservice",
+      "Third-party",
+      "RabbitMQ",
+      "Redis",
+    ],
   },
 ];
 
 export const projects = [
   {
-    name: "Build a Sportify connected App",
+    name: "Set Random Team League of Legends",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-    stacks: ["NextJS", "TailwindCSS", "Prisma", "Docker", "Docker Compose"],
-    image: "/project/project-1.jpg",
+      "Idea from my friend when we usually play game together but wasting too much time when split team. I came up with a solution to this problem.",
+    stacks: ["NextJS", "TailwindCSS"],
+    image: "/project/set-team-lol.png",
   },
   {
-    name: "Build a Sportify connected App2",
+    name: "Vua Tieng Viet",
+    href: "https://www.vuatiengviet.online/",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-    stacks: ["NextJS", "TailwindCSS", "Prisma", "Docker", "Docker Compose"],
-    image: "/project/project-1.jpg",
-  },
-  {
-    name: "Build a Sportify connected App3",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-    stacks: ["NextJS", "TailwindCSS", "Prisma", "Docker", "Docker Compose"],
-    image: "/project/project-1.jpg",
+      "Build a MiniGame Vua Tieng Viet based on TV shows. Guess the correct words from the scrambled letters.",
+    stacks: ["NextJS", "TailwindCSS", "Vercel"],
+    image: "/project/vtv.png",
   },
 ];
