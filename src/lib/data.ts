@@ -77,6 +77,7 @@ export const experiences = [
 export const projects = [
   {
     name: "Set Random Team League of Legends",
+    href: "https://chia-team.chaau.vn/",
     description:
       "Idea from my friend when we usually play game together but wasting too much time when split team. I came up with a solution to this problem.",
     stacks: ["NextJS", "TailwindCSS"],

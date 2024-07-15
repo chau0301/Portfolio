@@ -20,13 +20,17 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  /* overflow: scroll; */
+  scroll-behavior: smooth;
   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 @layer utilities {
