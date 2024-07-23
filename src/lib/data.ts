@@ -2,24 +2,30 @@ import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 
+export const personalInformation = {
+  name: "Chau Nong",
+  title: "Fullstack Web Developer",
+  summary: "I develop end-to-end, engaging, and user-friendly fullstack applications."
+}
+
 export const socials = [
   {
     name: "GitHub",
     title: "github",
-    url: "https://github.com/chau0301",
     icon: FaGithub,
+    url: "https://github.com/chau0301",
   },
   {
     name: "LinkedIn",
     title: "linkedin",
-    url: "https://www.linkedin.com/in/chau0301/",
     icon: FaLinkedin,
+    url: "https://www.linkedin.com/in/chau0301/",
   },
   {
     name: "Mail",
     title: "mail",
-    url: "mailto:nongngocchau1@gmail.com",
     icon: SiGmail,
+    url: "mailto:nongngocchau1@gmail.com",
   },
 ];
 
@@ -92,3 +98,4 @@ export const projects = [
     image: "/project/vtv.png",
   },
 ];
+
