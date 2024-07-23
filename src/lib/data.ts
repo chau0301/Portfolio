@@ -5,8 +5,14 @@ import { SiGmail } from "react-icons/si";
 export const personalInformation = {
   name: "Chau Nong",
   title: "Fullstack Web Developer",
-  summary: "I develop end-to-end, engaging, and user-friendly fullstack applications."
-}
+  summary:
+    "I develop end-to-end, engaging, and user-friendly fullstack applications.",
+  about: [
+    "Back in 2019, I dove headfirst into the world of Computer Science at National Economics University, igniting a passion that would shape my career trajectory. Fast-forward to today, and I've had the privilege of developing high-performance e-commerce platforms, crafting microservice-based applications, and even publishing papers at national conferences.",
+    "My ultimate goal? To become a Solution Architect. I'm driven by the desire to leverage my in-depth knowledge of technology, coupled with my growing analytical and solution design skills, to contribute meaningfully to an organization's development and success. This aspiration fuels my continuous learning and pushes me to tackle complex challenges head-on.",
+    "Outside the digital realm, I'm constantly expanding my horizons. Whether it's participating in international conferences on future language learning or snagging awards for scientific research, I'm always eager to learn and grow. And when I need a break from the screen, you might catch me brushing up on my English skills or diving into the latest tech literature, always ready for the next coding adventure.",
+  ],
+};
 
 export const socials = [
   {
@@ -98,4 +104,3 @@ export const projects = [
     image: "/project/vtv.png",
   },
 ];
-

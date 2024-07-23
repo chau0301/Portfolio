@@ -232,21 +232,11 @@ export default function Page() {
                   </h2>
                 </div>
                 <div>
-                  <p className="mb-4">
-                    {
-                      "Back in 2019, I dove headfirst into the world of Computer Science at National Economics University, igniting a passion that would shape my career trajectory. Fast-forward to today, and I've had the privilege of developing high-performance e-commerce platforms, crafting microservice-based applications, and even publishing papers at national conferences."
-                    }
-                  </p>
-                  <p className="mb-4">
-                    {
-                      "My ultimate goal? To become a Solution Architect. I'm driven by the desire to leverage my in-depth knowledge of technology, coupled with my growing analytical and solution design skills, to contribute meaningfully to an organization's development and success. This aspiration fuels my continuous learning and pushes me to tackle complex challenges head-on."
-                    }
-                  </p>
-                  <p className="mb-4">
-                    {
-                      "Outside the digital realm, I'm constantly expanding my horizons. Whether it's participating in international conferences on future language learning or snagging awards for scientific research, I'm always eager to learn and grow. And when I need a break from the screen, you might catch me brushing up on my English skills or diving into the latest tech literature, always ready for the next coding adventure."
-                    }
-                  </p>
+                  {personalInformation.about.map((paragraph, index) => (
+                    <p key={`about-${index}`} className="mb-4">
+                      {paragraph}
+                    </p>
+                  ))}
                 </div>
               </section>
 
