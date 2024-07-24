@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Chau Nong",
-  description: "Nong Ngoc Chau is a dedicated software engineer specializing in creating user-friendly, inclusive web applications and digital experiences with a focus on accessibility.",
+  title: "Truong Thu Hanh",
+  description: "Truong Thu Hanh",
 };
 
 export default function RootLayout({

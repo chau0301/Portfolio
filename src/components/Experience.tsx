@@ -23,7 +23,7 @@ export default function Experience(experienceProps: ExperienceProps) {
 
       <div className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2 group-hover:text-white duration-200">
         {time.from}
-        {" — "}
+        {"—"}
         {time.to}
       </div>
 
@@ -39,7 +39,7 @@ export default function Experience(experienceProps: ExperienceProps) {
         <ul className="mt-2 flex flex-wrap">
           {stacks.map((stack) => (
             <li key={stack} className="mr-1.5 mt-2">
-              <div className="flex items-center rounded-full bg-gray-700 text-tertiary px-3 py-1 text-xs font-medium leading-5 text-teal-300 ">
+              <div className="flex items-center rounded-full bg-gray-700 text-tertiary px-3 py-1 text-xs font-medium leading-5 ">
                 {stack}
               </div>
             </li>

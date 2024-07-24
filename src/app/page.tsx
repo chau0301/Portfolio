@@ -8,14 +8,15 @@ import styled from "styled-components";
 import {
   experiences,
   personalInformation,
-  projects,
   socials,
+  certificates,
+  organizations,
+  languages,
 } from "@/lib/data";
 import Experience from "@/components/Experience";
-import Project from "@/components/Project";
 import Footer from "@/components/Footer";
-import { useSearchParams } from "next/navigation";
-import { Switch } from "@/components/ui/switch";
+import Certificate from "@/components/Certificate";
+import Language from "@/components/Language";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger, useGSAP);
@@ -47,7 +48,12 @@ export default function Page() {
   const outerCursorRef = useRef<HTMLDivElement>(null);
   const innerCursorRef = useRef<HTMLDivElement>(null);
 
-  const sections = ["about", "experience", "project"];
+  const sections = [
+    "experience",
+    "education",
+    "certification",
+    "language",
+  ];
 
   const [currentSection, setCurrentSection] = useState(sections[0]);
   const [language, setLanguage] = useState("en");
@@ -207,7 +213,7 @@ export default function Page() {
                               currentSection === section && "text-white"
                             }`}
                           >
-                            {section}
+                            {section.replace("-", " & ")}
                           </span>
                         </a>
                       </li>
@@ -243,7 +249,7 @@ export default function Page() {
 
             {/*Content  */}
             <div className="pt-24 lg:w-1/2 lg:py-24">
-              <section
+              {/* <section
                 id="about"
                 className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
               >
@@ -259,7 +265,7 @@ export default function Page() {
                     </p>
                   ))}
                 </div>
-              </section>
+              </section> */}
 
               <section
                 id="experience"
@@ -282,13 +288,13 @@ export default function Page() {
                 </div>
               </section>
 
-              {/* <section
+              <section
                 id="education"
                 className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
               >
                 <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
                   <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">
-                    EDUEDUCATION
+                    EDUCATION
                   </h2>
                 </div>
 
@@ -299,40 +305,74 @@ export default function Page() {
                         <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
 
                         <div className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2 group-hover:text-white duration-200">
-                          {"10/2019"}
+                          {"09/2019"}
                           {" — "}
-                          {"01/2022"}
+                          {"10/2022"}
                         </div>
 
                         <div className="z-10 sm:col-span-6">
                           <h3 className="font-medium leading-snug text-white group-hover:text-tertiary transition duration-300">
                             {"National Economics University"}
                           </h3>
+                          <h2 className="mt-2 text-white group-hover:text-tertiary transition duration-300">
+                            {"Bachelor of International Economics"}
+                          </h2>
                           <p className="mt-2 text-sm leading-normal text-secondary">
-                            {"GPA: 3.2/4.0"}
+                            {"GPA: 3.61/4.0"}
                           </p>
                         </div>
                       </div>
                     </li>
                   </ol>
                 </div>
-              </section> */}
+
+                {/* <div>
+                  <ol className="group/list">
+                    {organizations.map((organization) => (
+                      <li className="mb-12" key={organization.name}>
+                        <Organization organization={organization} />
+                      </li>
+                    ))}
+                  </ol>
+                </div> */}
+              </section>
 
               <section
-                id="project"
+                id="certification"
                 className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
               >
                 <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
                   <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">
-                    PROJECT
+                    Licenses & Certifications
                   </h2>
                 </div>
 
                 <div>
                   <ol className="group/list">
-                    {projects.map((project) => (
-                      <li className="mb-12" key={project.name}>
-                        <Project project={project} />
+                    {certificates.map((certificate) => (
+                      <li className="mb-12" key={certificate.name}>
+                        <Certificate certificate={certificate} />
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+              </section>
+
+              <section
+                id="language"
+                className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
+              >
+                <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
+                  <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">
+                    Languages
+                  </h2>
+                </div>
+
+                <div>
+                  <ol className="group/list flex flex-row gap-14">
+                    {languages.map((language) => (
+                      <li className="mb-12" key={language.name}>
+                        <Language language={language} />
                       </li>
                     ))}
                   </ol>

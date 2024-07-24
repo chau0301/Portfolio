@@ -1,20 +1,19 @@
 import Image from "next/image";
 import React from "react";
 
-interface Project {
+interface Certificate {
+  time: string;
   name: string;
-  description: string;
+  organization: string;
   stacks: string[];
-  image: string;
-  href?: string;
 }
 
-interface ProjectProps {
-  project: Project;
+interface CertificateProps {
+  certificate: Certificate;
 }
 
-export default function Project(projectProps: ProjectProps) {
-  const { name, description, stacks, image, href } = projectProps.project;
+export default function Certificate(certificateProps: CertificateProps) {
+  const { time, name, organization, stacks } = certificateProps.certificate;
 
   return (
     <div className="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
@@ -22,11 +21,10 @@ export default function Project(projectProps: ProjectProps) {
 
       <div className="z-10 sm:order-2 sm:col-span-6">
         <h3 className="font-medium leading-snug text-primary group-hover:text-tertiary transition duration-300">
-          {href ? <a href={href}>{name}</a> : name}
+          {name}
         </h3>
-        <p className="mt-2 text-sm leading-normal text-secondary">
-          {description}
-        </p>
+        <p className="mt-2 text-sm leading-normal text-secondary">{time}</p>
+        <p className="mt-2 text-sm leading-normal text-secondary">{organization}</p>
         {stacks.length > 0 && (
           <ul className="mt-2 flex flex-wrap">
             {stacks.map((stack) => (
@@ -39,13 +37,13 @@ export default function Project(projectProps: ProjectProps) {
           </ul>
         )}
       </div>
-      <Image
+      {/* <Image
         src={image}
         alt={name}
         width={200}
         height={200}
         className="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1"
-      />
+      /> */}
     </div>
   );
 }
