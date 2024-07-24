@@ -17,6 +17,7 @@ import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
 import Certificate from "@/components/Certificate";
 import Language from "@/components/Language";
+import Organization from "@/components/Organization";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger, useGSAP);
@@ -52,6 +53,7 @@ export default function Page() {
     "experience",
     "education",
     "certification",
+    "organization",
     "language",
   ];
 
@@ -320,21 +322,23 @@ export default function Page() {
                           <p className="mt-2 text-sm leading-normal text-secondary">
                             {"GPA: 3.61/4.0"}
                           </p>
+                          <p className="mt-2 text-sm leading-normal text-secondary">
+                            <strong>01/2022: </strong>
+                            {
+                              "Student with excellent performance in The STIE’s Student Union (External Relations Department) (2019 - 2020)"
+                            }
+                          </p>
+                          <p className="mt-2 text-sm leading-normal text-secondary">
+                            <strong>07/2022: </strong>
+                            {
+                              "2nd prize in NEU's Student Scientific Research Competition 2022"
+                            }
+                          </p>
                         </div>
                       </div>
                     </li>
                   </ol>
                 </div>
-
-                {/* <div>
-                  <ol className="group/list">
-                    {organizations.map((organization) => (
-                      <li className="mb-12" key={organization.name}>
-                        <Organization organization={organization} />
-                      </li>
-                    ))}
-                  </ol>
-                </div> */}
               </section>
 
               <section
@@ -352,6 +356,27 @@ export default function Page() {
                     {certificates.map((certificate) => (
                       <li className="mb-12" key={certificate.name}>
                         <Certificate certificate={certificate} />
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+              </section>
+
+              <section
+                id="organization"
+                className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
+              >
+                <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
+                  <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">
+                    Organization
+                  </h2>
+                </div>
+
+                <div>
+                  <ol className="group/list">
+                    {organizations.map((organization) => (
+                      <li className="mb-12" key={organization.name}>
+                        <Organization organization={organization} />
                       </li>
                     ))}
                   </ol>
