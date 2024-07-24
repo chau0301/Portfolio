@@ -5,10 +5,17 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import styled from "styled-components";
-import { experiences, personalInformation, projects, socials } from "@/lib/data";
+import {
+  experiences,
+  personalInformation,
+  projects,
+  socials,
+} from "@/lib/data";
 import Experience from "@/components/Experience";
 import Project from "@/components/Project";
 import Footer from "@/components/Footer";
+import { useSearchParams } from "next/navigation";
+import { Switch } from "@/components/ui/switch";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger, useGSAP);
@@ -41,7 +48,17 @@ export default function Page() {
   const innerCursorRef = useRef<HTMLDivElement>(null);
 
   const sections = ["about", "experience", "project"];
+
   const [currentSection, setCurrentSection] = useState(sections[0]);
+  const [language, setLanguage] = useState("en");
+
+  const handleChangeLanguage = (checked: boolean) => {
+    if (checked) {
+      setLanguage("vi");
+    } else {
+      setLanguage("en");
+    }
+  };
 
   useGSAP(() => {
     class GlowCursor {
@@ -199,7 +216,7 @@ export default function Page() {
                 </nav>
               </div>
               {/* Social */}
-              <div>
+              <div className="flex flex-row justify-between items-center">
                 <ul className="ml-1 mt-8 flex items-center">
                   {socials.map((social) => (
                     <li key={social.name} className="mr-5 text-xs shrink-0">
@@ -217,6 +234,10 @@ export default function Page() {
                     </li>
                   ))}
                 </ul>
+
+                {/* <div className="ml-1 mt-8 flex items-end">
+                  <Switch className="bg-gray-700 data-[state=checked]:bg-gray-200" checked={language === "vi"} onCheckedChange={(checked) => handleChangeLanguage(checked)} />
+                </div> */}
               </div>
             </header>
 
