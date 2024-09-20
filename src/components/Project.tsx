@@ -27,7 +27,7 @@ export default function Project(projectProps: ProjectProps) {
         <p className="mt-2 text-sm leading-normal text-secondary">
           {description}
         </p>
-        {stacks.length > 0 && (
+        {stacks?.length > 0 && (
           <ul className="mt-2 flex flex-wrap">
             {stacks.map((stack) => (
               <li key={stack} className="mr-1.5 mt-2">

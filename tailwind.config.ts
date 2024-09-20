@@ -14,23 +14,21 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-    },
-    colors: {
-      primary: "#96B6C5",
-      secondary: "#ADC4CE",
-      tertiary: "#EEE0C9",
-      quaternary: "#F1F0E8",
-      transparent: "transparent",
-      ...colors,
+      colors: {
+        primary: "#96B6C5",
+        secondary: "#ADC4CE",
+        tertiary: "#EEE0C9",
+        quaternary: "#F1F0E8",
+      },
     },
     animation: {
-      "rotate": "rotate 20s infinite",
+      rotate: "rotate 20s infinite",
     },
     keyframes: {
       rotate: {
-        '0%': { transform: 'rotate(0deg)' },
-        '50%': { transform: 'rotate(3deg)', scale: '1 1.5' },
-        '100%': { transform: 'rotate(360deg)' },
+        "0%": { transform: "rotate(0deg)" },
+        "50%": { transform: "rotate(3deg)", scale: "1 1.5" },
+        "100%": { transform: "rotate(360deg)" },
       },
     },
   },

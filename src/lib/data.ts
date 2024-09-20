@@ -88,6 +88,13 @@ export const experiences = [
 
 export const projects = [
   {
+    name: "Barcode to PDF",
+    href: "https://www.piccygifts.com/",
+    description: "Simple app to convert multiple barcode to PDF for printing",
+    image: "/project/barcode-to-pdf.png",
+    stacks: ["NextJS"],
+  },
+  {
     name: "Set Random Team League of Legends",
     href: "https://chia-team.chaau.vn/",
     description:

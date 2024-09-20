@@ -162,7 +162,7 @@ export default function Page() {
   });
 
   return (
-    <div className="no-scrollbar relative bg-[url('/image/bg.jpg')] bg-repeat scroll-smooth">
+    <div className="no-scrollbar relative bg-[url('/image/bg.jpg')] bg-repeat scroll-smooth text-base">
       <CircleCursorInner
         ref={innerCursorRef}
         className="hidden md:block"
