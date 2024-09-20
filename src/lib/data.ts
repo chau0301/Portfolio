@@ -88,6 +88,13 @@ export const experiences = [
 
 export const projects = [
   {
+    name: "E-commerce Store",
+    href: "https://github.com/chau0301/ecommerce-store",
+    description: "E-commerce store with Shopify integration",
+    image: "/project/ecommerce.png",
+    stacks: ["NextJS", "TailwindCSS", "Shadcn", "Shopify-Api", "NestJS", "NodeJs"],
+  },
+  {
     name: "Barcode to PDF",
     href: "https://www.piccygifts.com/",
     description: "Simple app to convert multiple barcode to PDF for printing",

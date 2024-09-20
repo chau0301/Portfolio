@@ -31,7 +31,7 @@ export default function Project(projectProps: ProjectProps) {
           <ul className="mt-2 flex flex-wrap">
             {stacks.map((stack) => (
               <li key={stack} className="mr-1.5 mt-2">
-                <div className="flex items-center rounded-full bg-gray-700 text-tertiary px-3 py-1 text-xs font-medium leading-5 text-teal-300 ">
+                <div className="flex items-center rounded-full bg-gray-700 px-3 py-1 text-xs font-medium leading-5 text-teal-300 ">
                   {stack}
                 </div>
               </li>
